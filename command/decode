@@ -1,0 +1,4 @@
+#!/bin/sh
+
+rm -rf base
+apktool d -o base -f apk/base.apk

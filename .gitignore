@@ -1,0 +1,4 @@
+apk/*.apk
+base/
+custom/
+keystore.jks

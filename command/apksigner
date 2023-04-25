@@ -1,0 +1,3 @@
+#!/bin/sh
+
+apksigner sign --ks-key-alias $1 --ks $2 base/dist/base-aligned.apk
