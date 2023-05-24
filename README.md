@@ -44,7 +44,7 @@ ADRL = ADRP ADD
 C1 2F FF D0   21 AC 04 91
    ADRP           ADD
 
-Want change to new location, change 4th hex of ADRP for break ADRL => ADRP ADD,
+Want change to new location, change 4th (or 6, 7) hex for break ADRL => ADRP ADD,
 Then use IDA keypatch.
 ```
 
