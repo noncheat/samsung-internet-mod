@@ -41,10 +41,10 @@ Website can not detect and will service good content (Example Facebook comment).
 ADRL = ADRP ADD
 
 ```
-C1 2F FF D0   21 AC 04 91
-   ADRP           ADD
+C1 2F FF D0            21 AC 04 91
+ADRP X1, #0xB64000     ADD X1, X1, #0x12B
 
-Want change to new location, change 4th (or 6, 7) hex for break ADRL => ADRP ADD,
+Want change to new location, change last 4 hex to 00 00 00 00 for break ADRL => ADRP,
 Then use IDA keypatch.
 ```
 
