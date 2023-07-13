@@ -56,3 +56,22 @@ C1 2F FF D0 (page B64000) 21 AC 04 91 (address 12B)
 new rodata at B63FB5 then
 C1 2F FF B0 (page B63000) 21 D4 3E 91 (address FB5)
 ```
+
+Finding not use String, View > Open subview > Strings
+
+```
+import idautils
+
+def find_strings_not_used_by_xrefsto():
+    """Finds all strings that are not used by the XrefsTo function."""
+    strings = []
+    has_references = 0
+    for string in idautils.Strings():
+        has_references = 0
+        for x in idautils.XrefsTo(string.ea):
+            has_references = 1
+        if has_references == 0:
+            print(string)
+
+find_strings_not_used_by_xrefsto()
+```
