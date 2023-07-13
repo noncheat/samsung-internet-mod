@@ -1,0 +1,3 @@
+#!/bin/sh
+
+apksigner verify --print-certs -v apk/base.apk
