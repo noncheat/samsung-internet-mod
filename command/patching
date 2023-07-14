@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# ./command/patching folder file_name
+
+mkdir -p patching/$1
+cp -R $1/$2 patching/$1

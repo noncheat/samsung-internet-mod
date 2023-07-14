@@ -1,4 +1,6 @@
 apk/*.apk
 base/
 custom/
+patching/**
+!patching/.gitkeep
 keystore.jks

@@ -1,0 +1,39 @@
+From 9543a234d74dca985e4af8e20723b4f9f4a258bd Mon Sep 17 00:00:00 2001
+From: quyenvsp <quyenvsp@gmail.com>
+Date: Fri, 14 Jul 2023 12:37:11 +0700
+Subject: [PATCH] Show full url in history page
+
+---
+ base/res/layout/history_item.xml                                | 2 +-
+ .../app/sbrowser/sites/history/view/HistoryAdapter.smali        | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/base/res/layout/history_item.xml b/base/res/layout/history_item.xml
+index 25bbf06..2af6457 100644
+--- a/base/res/layout/history_item.xml
++++ b/base/res/layout/history_item.xml
+@@ -10,7 +10,7 @@
+         <LinearLayout android:orientation="vertical" android:id="@id/linear_text_layout" android:paddingTop="@dimen/history_item_text_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/history_item_text_layout_margin_end">
+             <LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/history_item_text_padding" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                 <TextView android:theme="@style/AppTheme" android:textAppearance="?android:textAppearanceMedium" android:textSize="@dimen/history_title_text_size" android:textColor="@color/history_list_text_title_color" android:ellipsize="end" android:id="@id/history_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="@integer/history_download_view_title_maxline" android:fontFamily="sec-roboto-light" />
+-                <TextView android:theme="@style/AppTheme" android:textAppearance="?android:textAppearanceSmall" android:textSize="@dimen/history_url_text_size" android:textColor="@color/history_list_subtext_color" android:ellipsize="middle" android:id="@id/history_url" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/history_item_divider_height" android:minHeight="@dimen/history_header_item_height" android:maxLines="@integer/history_download_view_title_maxline" android:singleLine="true" />
++                <TextView android:theme="@style/AppTheme" android:textAppearance="?android:textAppearanceSmall" android:textSize="@dimen/history_url_text_size" android:textColor="@color/history_list_subtext_color" android:ellipsize="end" android:id="@id/history_url" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/history_item_divider_height" android:minHeight="@dimen/history_header_item_height" android:maxLines="@integer/history_download_view_title_maxline" android:singleLine="true" />
+             </LinearLayout>
+             <View android:orientation="horizontal" android:id="@id/history_page_list_view_bottom_divider_layout" android:background="@color/history_page_list_view_bottom_divider_layout_color" android:layout_width="fill_parent" android:layout_height="@dimen/history_item_video_divider_height" android:layout_alignParentBottom="true" />
+         </LinearLayout>
+diff --git a/base/smali_classes3/com/sec/android/app/sbrowser/sites/history/view/HistoryAdapter.smali b/base/smali_classes3/com/sec/android/app/sbrowser/sites/history/view/HistoryAdapter.smali
+index 409bdd7..2515ba9 100644
+--- a/base/smali_classes3/com/sec/android/app/sbrowser/sites/history/view/HistoryAdapter.smali
++++ b/base/smali_classes3/com/sec/android/app/sbrowser/sites/history/view/HistoryAdapter.smali
+@@ -589,7 +589,7 @@
+     .line 66
+     .line 67
+     .line 68
+-    invoke-virtual {v0}, Ljava/net/URL;->getHost()Ljava/lang/String;
++    invoke-virtual {v0}, Ljava/net/URL;->toString()Ljava/lang/String;
+ 
+     .line 69
+     .line 70
+-- 
+2.41.0.windows.2
+
