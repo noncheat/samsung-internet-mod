@@ -27,6 +27,8 @@ Website can not detect and will service good content (Example Facebook comment).
 - check versionInfo versionCode in `base/apktool.yml`
 - run command to patch:
     ```
+    # run common patch first
+    ./patch/0/patch
     ./patch/[your_apk_version_code]/patch
     ```
 - place `keystore.jks` in root folder

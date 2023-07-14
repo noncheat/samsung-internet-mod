@@ -1,9 +1,5 @@
 #!/bin/sh
 
-for file in patch/1200605502/*.patch; do
-  patch -p1 < "$file"
-done
-
 # Remove text SamsungBrowser
 sed -b -i 's/\x00\x53\x61\x6D\x73\x75\x6E\x67\x42\x72\x6F\x77\x73\x65\x72\x2F\x00/\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00/1' base/lib/arm64-v8a/libterrace.so
 # Change aSubmitcomposit_6 to " SamsungBrowser/21.0 Mobile"
