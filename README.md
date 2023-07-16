@@ -29,7 +29,7 @@ Website can not detect and will service good content (Example Facebook comment).
     ```
     # run common patch first
     ./patch/0/patch
-    ./patch/[your_apk_version_code]/patch
+    ./patch/[your_apk_version_code_or_try_nearest]/patch
     ```
 - place `keystore.jks` in root folder
 - run command to build:
