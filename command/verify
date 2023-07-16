@@ -1,3 +1,3 @@
 #!/bin/sh
 
-apksigner verify --print-certs -v apk/base.apk
+apksigner verify --print-certs -v apk/base.apk | grep 34df0e7a9f1cf1892e45c056b4973cd81ccf148a4050d11aea4ac5a65f900a42
