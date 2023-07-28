@@ -1,6 +1,6 @@
 #!/bin/sh
 
 for file in patch/0/*.patch; do
-  patch -p1 < "$file"
+  patch -p1 --no-backup-if-mismatch < "$file"
 done
 
