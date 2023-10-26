@@ -22,18 +22,18 @@ index 25bbf06..2af6457 100644
              <View android:orientation="horizontal" android:id="@id/history_page_list_view_bottom_divider_layout" android:background="@color/history_page_list_view_bottom_divider_layout_color" android:layout_width="fill_parent" android:layout_height="@dimen/history_item_video_divider_height" android:layout_alignParentBottom="true" />
          </LinearLayout>
 diff --git a/base/smali_classes3/com/sec/android/app/sbrowser/sites/history/view/HistoryAdapter.smali b/base/smali_classes3/com/sec/android/app/sbrowser/sites/history/view/HistoryAdapter.smali
-index 409bdd7..2515ba9 100644
+index 8a2834e..7dbab4b 100644
 --- a/base/smali_classes3/com/sec/android/app/sbrowser/sites/history/view/HistoryAdapter.smali
 +++ b/base/smali_classes3/com/sec/android/app/sbrowser/sites/history/view/HistoryAdapter.smali
-@@ -589,7 +589,7 @@
-     .line 66
-     .line 67
-     .line 68
--    invoke-virtual {v0}, Ljava/net/URL;->getHost()Ljava/lang/String;
-+    invoke-virtual {v0}, Ljava/net/URL;->toString()Ljava/lang/String;
+@@ -247,7 +247,7 @@
  
-     .line 69
-     .line 70
+     invoke-direct {v2, v10}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
+ 
+-    invoke-virtual {v2}, Ljava/net/URL;->getHost()Ljava/lang/String;
++    invoke-virtual {v2}, Ljava/net/URL;->toString()Ljava/lang/String;
+ 
+     move-result-object v2
+     :try_end_0
 -- 
-2.41.0.windows.2
+2.42.0.windows.2
 

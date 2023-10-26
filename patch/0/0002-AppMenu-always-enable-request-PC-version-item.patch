@@ -1,0 +1,25 @@
+From ffb06e96d07ec3089bd5c36edeb67118794cb780 Mon Sep 17 00:00:00 2001
+From: quyenvsp <quyenvsp@gmail.com>
+Date: Thu, 26 Oct 2023 09:48:59 +0700
+Subject: [PATCH] AppMenu always enable request PC version item
+
+---
+ .../com/sec/android/app/sbrowser/main_view/menu/AppMenu.smali   | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/base/smali_classes2/com/sec/android/app/sbrowser/main_view/menu/AppMenu.smali b/base/smali_classes2/com/sec/android/app/sbrowser/main_view/menu/AppMenu.smali
+index cf14aa8..6eaaff2 100644
+--- a/base/smali_classes2/com/sec/android/app/sbrowser/main_view/menu/AppMenu.smali
++++ b/base/smali_classes2/com/sec/android/app/sbrowser/main_view/menu/AppMenu.smali
+@@ -398,7 +398,7 @@
+     goto :goto_1
+ 
+     :cond_1
+-    const/4 p1, 0x0
++    const/4 p1, 0x1
+ 
+     invoke-static {p2, p1}, Lcom/sec/android/app/sbrowser/common/utils/ViewUtil;->setMenuItemEnabled(Landroid/view/MenuItem;Z)V
+ 
+-- 
+2.42.0.windows.2
+
