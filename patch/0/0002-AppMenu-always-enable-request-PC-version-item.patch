@@ -11,7 +11,7 @@ diff --git a/base/smali_classes3/com/sec/android/app/sbrowser/main_view/menu/App
 index cf14aa8..6eaaff2 100644
 --- a/base/smali_classes3/com/sec/android/app/sbrowser/main_view/menu/AppMenu.smali
 +++ b/base/smali_classes3/com/sec/android/app/sbrowser/main_view/menu/AppMenu.smali
-@@ -398,7 +398,7 @@
+@@ -426,7 +426,7 @@
      goto :goto_1
  
      :cond_1
