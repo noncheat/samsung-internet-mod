@@ -1,0 +1,269 @@
+From dc22c71a9b6d65449d2a28fc66d30e198a93840d Mon Sep 17 00:00:00 2001
+From: quyenvsp <quyenvsp@gmail.com>
+Date: Sat, 23 Nov 2024 00:09:14 +0700
+Subject: [PATCH] Fix build
+
+---
+ base/apktool.yml                              |   2 +-
+ base/res/layout/bottombar_tabs.xml            |   2 +-
+ base/res/layout/find_on_page_toolbar.xml      |   2 +-
+ base/res/layout/location_bar.xml              |   2 +-
+ .../layout/quick_access_add_web_fragment.xml  |   2 +-
+ base/res/layout/toolbar_tabs.xml              |   2 +-
+ base/res/values-v34/colors.xml                | 160 +++++++++---------
+ 7 files changed, 86 insertions(+), 86 deletions(-)
+
+diff --git a/base/apktool.yml b/base/apktool.yml
+index 8440d27..a18c767 100644
+--- a/base/apktool.yml
++++ b/base/apktool.yml
+@@ -7,7 +7,7 @@ usesFramework:
+   tag: null
+ sdkInfo:
+   minSdkVersion: 28
+-  targetSdkVersion: 35
++  targetSdkVersion: 34
+ packageInfo:
+   forcedPackageId: 127
+   renameManifestPackage: null
+diff --git a/base/res/layout/bottombar_tabs.xml b/base/res/layout/bottombar_tabs.xml
+index c5c5411..7eacfb8 100644
+--- a/base/res/layout/bottombar_tabs.xml
++++ b/base/res/layout/bottombar_tabs.xml
+@@ -1,5 +1,5 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/tabs_bg" android:background="@drawable/item_background_touch_effect" android:focusable="true" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:stateListAnimator="?seslSmallTouchAnimator"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+-    <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/bottombar_multiwindow_text_size" android:textStyle="bold" android:gravity="bottom|center" android:id="@id/tabs_icon" android:background="@drawable/toolbar_tabmanager_selector" android:paddingBottom="@dimen/bottombar_multiwindow_count_padding_bottom" android:layout_width="@dimen/bottombar_button_icon_size" android:layout_height="@dimen/bottombar_button_icon_size" android:scaleType="center" android:fontFamily="sec-roboto-light" android:paddingEnd="@dimen/bottombar_multiwindow_count_padding_end" android:elegantTextHeight="false" android:useLocalePreferredLineHeightForMinimum="false" style="@style/RobotoMedium" />
++    <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/bottombar_multiwindow_text_size" android:textStyle="bold" android:gravity="bottom|center" android:id="@id/tabs_icon" android:background="@drawable/toolbar_tabmanager_selector" android:paddingBottom="@dimen/bottombar_multiwindow_count_padding_bottom" android:layout_width="@dimen/bottombar_button_icon_size" android:layout_height="@dimen/bottombar_button_icon_size" android:scaleType="center" android:fontFamily="sec-roboto-light" android:paddingEnd="@dimen/bottombar_multiwindow_count_padding_end" android:elegantTextHeight="false" style="@style/RobotoMedium" />
+ </LinearLayout>
+\ No newline at end of file
+diff --git a/base/res/layout/find_on_page_toolbar.xml b/base/res/layout/find_on_page_toolbar.xml
+index bca4231..901be0d 100644
+--- a/base/res/layout/find_on_page_toolbar.xml
++++ b/base/res/layout/find_on_page_toolbar.xml
+@@ -11,7 +11,7 @@
+                         <LinearLayout android:layout_width="@dimen/find_on_page_start_end_item_container_width" android:layout_height="fill_parent">
+                             <ImageButton android:layout_gravity="center_vertical" android:id="@id/search_box_navigate_up_button" android:background="@drawable/toolbar_button_touch_effect_without_mask" android:layout_width="@dimen/find_on_page_icon_size" android:layout_height="fill_parent" android:src="@drawable/navigate_up_button" android:contentDescription="@string/action_bar_up_description" android:layout_marginStart="@dimen/find_on_page_toolbar_padding_start_end" android:layout_marginEnd="@dimen/find_on_page_navigate_up_end_margin" android:stateListAnimator="?seslSmallTouchAnimator" />
+                         </LinearLayout>
+-                        <com.sec.android.app.sbrowser.common.widget.SafeEditText android:textSize="@dimen/find_on_page_text_size" android:textColor="@color/color_palette_find_on_page_input_text_color" android:textColorHint="@color/color_palette_list_view_search_field_hint_text_color" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="center" android:id="@id/find_edit_text" android:background="@null" android:layout_width="0.0dip" android:layout_height="fill_parent" android:hint="@string/find_on_page_hint" android:singleLine="true" android:layout_weight="1.0" android:inputType="textAutoComplete" android:imeOptions="actionSearch|flagNoExtractUi|flagNoFullscreen" android:paddingEnd="@dimen/find_on_page_edit_text_padding_end" android:layout_marginStart="@dimen/find_on_page_edit_text_start_margin" android:elegantTextHeight="false" android:useLocalePreferredLineHeightForMinimum="false" sbrowser:textSizeDp="@dimen/find_on_page_maxTextSize" style="@style/RobotoMedium" />
++                        <com.sec.android.app.sbrowser.common.widget.SafeEditText android:textSize="@dimen/find_on_page_text_size" android:textColor="@color/color_palette_find_on_page_input_text_color" android:textColorHint="@color/color_palette_list_view_search_field_hint_text_color" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="center" android:id="@id/find_edit_text" android:background="@null" android:layout_width="0.0dip" android:layout_height="fill_parent" android:hint="@string/find_on_page_hint" android:singleLine="true" android:layout_weight="1.0" android:inputType="textAutoComplete" android:imeOptions="actionSearch|flagNoExtractUi|flagNoFullscreen" android:paddingEnd="@dimen/find_on_page_edit_text_padding_end" android:layout_marginStart="@dimen/find_on_page_edit_text_start_margin" android:elegantTextHeight="false" sbrowser:textSizeDp="@dimen/find_on_page_maxTextSize" style="@style/RobotoMedium" />
+                         <FrameLayout android:id="@id/toolbar_button_container" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                             <LinearLayout android:id="@id/search_box_delete_button_container" android:visibility="gone" android:layout_width="@dimen/find_on_page_delete_container_width" android:layout_height="fill_parent">
+                                 <ImageButton android:layout_gravity="center_vertical" android:id="@id/search_box_delete_button" android:background="@drawable/toolbar_button_touch_effect_without_mask" android:layout_width="@dimen/find_on_page_icon_size" android:layout_height="fill_parent" android:src="@drawable/internet_menu_cancel" android:contentDescription="@string/accessibility_button_clear" android:stateListAnimator="?seslSmallTouchAnimator" android:layout_marginHorizontal="@dimen/find_on_page_delete_button_margin" />
+diff --git a/base/res/layout/location_bar.xml b/base/res/layout/location_bar.xml
+index 10aaeb4..6260134 100644
+--- a/base/res/layout/location_bar.xml
++++ b/base/res/layout/location_bar.xml
+@@ -8,7 +8,7 @@
+         <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/url_bar_container" android:focusable="false" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+             <ViewStub android:id="@id/security_button_stub" android:layout="@layout/security_button" android:inflatedId="@id/security_button" android:layout_width="@dimen/location_bar_icon_size" android:layout_height="fill_parent" />
+             <ViewStub android:id="@id/secret_icon_stub" android:layout="@layout/secret_icon" android:inflatedId="@id/secret_icon" android:layout_width="@dimen/location_bar_secret_icon_size" android:layout_height="fill_parent" android:layout_marginStart="@dimen/location_bar_secret_icon_margin" />
+-            <com.sec.android.app.sbrowser.omnibox.UrlBar android:textSize="@dimen/toolbar_text_size_normal" android:textColor="@color/toolbar_url_text_color" android:textColorHint="@color/toolbar_url_hint_text_color" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/location_bar_edit_text" android:background="@null" android:fadingEdge="horizontal" android:fadingEdgeLength="15.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scrollHorizontally="true" android:singleLine="true" android:selectAllOnFocus="true" android:maxLength="@integer/location_bar_edit_text_max_length" android:inputType="textUri" android:imeOptions="actionGo|flagNoExtractUi|flagNoFullscreen" android:elegantTextHeight="false" android:paddingHorizontal="@dimen/location_bar_url_padding" android:importantForAutofill="no" android:useLocalePreferredLineHeightForMinimum="false" style="@style/RobotoMedium" />
++            <com.sec.android.app.sbrowser.omnibox.UrlBar android:textSize="@dimen/toolbar_text_size_normal" android:textColor="@color/toolbar_url_text_color" android:textColorHint="@color/toolbar_url_hint_text_color" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/location_bar_edit_text" android:background="@null" android:fadingEdge="horizontal" android:fadingEdgeLength="15.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scrollHorizontally="true" android:singleLine="true" android:selectAllOnFocus="true" android:maxLength="@integer/location_bar_edit_text_max_length" android:inputType="textUri" android:imeOptions="actionGo|flagNoExtractUi|flagNoFullscreen" android:elegantTextHeight="false" android:paddingHorizontal="@dimen/location_bar_url_padding" android:importantForAutofill="no" style="@style/RobotoMedium" />
+         </LinearLayout>
+         <ViewStub android:layout_gravity="center_vertical" android:id="@id/copy_button_stub" android:layout="@layout/copy_button" android:inflatedId="@id/copy_button" android:layout_width="@dimen/location_bar_icon_size" android:layout_height="fill_parent" android:layout_marginHorizontal="@dimen/location_bar_icon_margin" />
+         <ViewStub android:layout_gravity="center_vertical" android:id="@id/deep_link_icon_stub" android:layout="@layout/deep_link_icon" android:inflatedId="@id/deep_link_icon" android:layout_width="@dimen/location_bar_icon_size" android:layout_height="fill_parent" android:layout_marginHorizontal="@dimen/location_bar_icon_margin" />
+diff --git a/base/res/layout/quick_access_add_web_fragment.xml b/base/res/layout/quick_access_add_web_fragment.xml
+index 027eccf..3a8c578 100644
+--- a/base/res/layout/quick_access_add_web_fragment.xml
++++ b/base/res/layout/quick_access_add_web_fragment.xml
+@@ -4,7 +4,7 @@
+     <androidx.cardview.widget.CardView android:id="@id/edit_text_input_card" android:paddingTop="@dimen/quickaccess_add_web_edit_text_input_card_padding_top" android:paddingBottom="@dimen/quickaccess_add_web_edit_text_input_card_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/quickaccess_add_web_edit_text_input_card_margin_bottom" app:cardBackgroundColor="@color/color_palette_list_view_item_bg_color" app:cardCornerRadius="@dimen/quickaccess_add_web_edit_text_input_card_radius" app:cardElevation="0.0dip">
+         <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+             <com.google.android.material.textfield.TextInputLayout android:theme="@style/Theme.AppCompat" android:id="@id/edit_text_input_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="@dimen/quickaccess_add_web_edit_text_input_layout_margin_horizontal" android:layout_marginVertical="@dimen/quickaccess_add_web_edit_text_input_layout_margin_vertical" app:errorTextAppearance="@style/TextFieldErrorAppearance" app:hintEnabled="false">
+-                <com.sec.android.app.sbrowser.quickaccess.ui.page.QuickAccessAddWebEditText android:theme="@style/SettingsThemeForDialogEditText" android:textSize="@dimen/quickaccess_add_web_edit_text_size" android:textColor="@color/quickaccess_dialog_edit_text_color" android:textColorHint="@color/quickaccess_dialog_edit_text_color_hint" android:ellipsize="end" android:gravity="start|bottom|center" android:id="@id/edit_text" android:nextFocusRight="@id/clear_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/quickaccess_add_web_edit_text_min_height" android:singleLine="true" android:inputType="textUri" android:privateImeOptions="disableEmoticonInput=true" android:imeOptions="actionDone|flagNoExtractUi|flagNoFullscreen" android:textCursorDrawable="@drawable/quickaccess_dialog_edit_text_cursor" android:importantForAccessibility="yes" android:textDirection="firstStrong" android:paddingEnd="@dimen/quickaccess_add_web_edit_text_padding_end" android:elegantTextHeight="false" android:backgroundTint="@color/quickaccess_dialog_edit_text_color" android:useLocalePreferredLineHeightForMinimum="false" style="@style/RobotoRegular" />
++                <com.sec.android.app.sbrowser.quickaccess.ui.page.QuickAccessAddWebEditText android:theme="@style/SettingsThemeForDialogEditText" android:textSize="@dimen/quickaccess_add_web_edit_text_size" android:textColor="@color/quickaccess_dialog_edit_text_color" android:textColorHint="@color/quickaccess_dialog_edit_text_color_hint" android:ellipsize="end" android:gravity="start|bottom|center" android:id="@id/edit_text" android:nextFocusRight="@id/clear_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/quickaccess_add_web_edit_text_min_height" android:singleLine="true" android:inputType="textUri" android:privateImeOptions="disableEmoticonInput=true" android:imeOptions="actionDone|flagNoExtractUi|flagNoFullscreen" android:textCursorDrawable="@drawable/quickaccess_dialog_edit_text_cursor" android:importantForAccessibility="yes" android:textDirection="firstStrong" android:paddingEnd="@dimen/quickaccess_add_web_edit_text_padding_end" android:elegantTextHeight="false" android:backgroundTint="@color/quickaccess_dialog_edit_text_color" style="@style/RobotoRegular" />
+             </com.google.android.material.textfield.TextInputLayout>
+             <LinearLayout android:gravity="center_vertical" android:layout_gravity="end|center|top" android:orientation="horizontal" android:id="@id/clear_button_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/quickaccess_add_web_edit_text_input_layout_margin_vertical" android:layout_marginEnd="@dimen/quickaccess_add_web_edit_text_input_layout_margin_horizontal">
+                 <ImageButton android:id="@id/clear_button" android:background="@drawable/item_background_touch_effect" android:padding="@dimen/quickaccess_add_web_edit_text_clear_icon_padding" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="@dimen/quickaccess_add_web_edit_text_clear_icon_size" android:layout_height="@dimen/quickaccess_add_web_edit_text_clear_icon_size" android:layout_marginBottom="@dimen/quickaccess_add_web_edit_text_clear_icon_margin_bottom" android:src="@drawable/internet_ic_close" android:scaleType="fitCenter" android:tint="@color/quickaccess_dialog_edit_text_color" android:contentDescription="@string/accessibility_button_clear" android:nextFocusForward="@id/edit_text_input_layout" android:stateListAnimator="?seslSmallTouchAnimator" />
+diff --git a/base/res/layout/toolbar_tabs.xml b/base/res/layout/toolbar_tabs.xml
+index 3cc5961..4c6490f 100644
+--- a/base/res/layout/toolbar_tabs.xml
++++ b/base/res/layout/toolbar_tabs.xml
+@@ -1,5 +1,5 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/tabs_bg" android:background="@drawable/toolbar_button_touch_effect" android:focusable="true" android:clickable="true" android:layout_width="@dimen/toolbar_icon_width" android:layout_height="fill_parent" android:stateListAnimator="?seslSmallTouchAnimator"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+-    <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/bottombar_multiwindow_text_size" android:textStyle="bold" android:gravity="bottom|center" android:id="@id/tabs_icon" android:background="@drawable/toolbar_tabmanager_selector" android:paddingBottom="@dimen/bottombar_multiwindow_count_padding_bottom" android:layout_width="@dimen/bottombar_button_icon_size" android:layout_height="@dimen/bottombar_button_icon_size" android:contentDescription="@string/bottombar_tabs" android:fontFamily="sec-roboto-light" android:paddingEnd="@dimen/bottombar_multiwindow_count_padding_end" android:elegantTextHeight="false" android:useLocalePreferredLineHeightForMinimum="false" />
++    <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/bottombar_multiwindow_text_size" android:textStyle="bold" android:gravity="bottom|center" android:id="@id/tabs_icon" android:background="@drawable/toolbar_tabmanager_selector" android:paddingBottom="@dimen/bottombar_multiwindow_count_padding_bottom" android:layout_width="@dimen/bottombar_button_icon_size" android:layout_height="@dimen/bottombar_button_icon_size" android:contentDescription="@string/bottombar_tabs" android:fontFamily="sec-roboto-light" android:paddingEnd="@dimen/bottombar_multiwindow_count_padding_end" android:elegantTextHeight="false" />
+ </LinearLayout>
+\ No newline at end of file
+diff --git a/base/res/values-v34/colors.xml b/base/res/values-v34/colors.xml
+index 2eb1536..a3922bc 100644
+--- a/base/res/values-v34/colors.xml
++++ b/base/res/values-v34/colors.xml
+@@ -1,77 +1,77 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <resources>
+-    <color name="m3_sys_color_dynamic_dark_background">@android:color/bright_foreground_dark_disabled</color>
+-    <color name="m3_sys_color_dynamic_dark_inverse_on_surface">@android:color/accent_device_default_700</color>
+-    <color name="m3_sys_color_dynamic_dark_inverse_primary">@android:color/GM2_grey_800</color>
+-    <color name="m3_sys_color_dynamic_dark_inverse_surface">@android:color/accent_device_default_50</color>
+-    <color name="m3_sys_color_dynamic_dark_on_background">@android:color/bright_foreground_dark_inverse</color>
+-    <color name="m3_sys_color_dynamic_dark_on_primary">@android:color/background_floating_device_default_light</color>
+-    <color name="m3_sys_color_dynamic_dark_on_primary_container">@android:color/background_device_default_light</color>
+-    <color name="m3_sys_color_dynamic_dark_on_secondary">@android:color/background_holo_light</color>
+-    <color name="m3_sys_color_dynamic_dark_on_secondary_container">@android:color/background_floating_material_light</color>
+-    <color name="m3_sys_color_dynamic_dark_on_surface">@android:color/bright_foreground_disabled_holo_light</color>
+-    <color name="m3_sys_color_dynamic_dark_on_surface_variant">@android:color/btn_colored_borderless_text_material</color>
+-    <color name="m3_sys_color_dynamic_dark_on_tertiary">@android:color/bright_foreground_dark</color>
+-    <color name="m3_sys_color_dynamic_dark_on_tertiary_container">@android:color/background_material_dark</color>
+-    <color name="m3_sys_color_dynamic_dark_outline">@android:color/btn_colored_text_material</color>
+-    <color name="m3_sys_color_dynamic_dark_outline_variant">@android:color/car_blue_700</color>
+-    <color name="m3_sys_color_dynamic_dark_primary">@android:color/background_floating_device_default_dark</color>
+-    <color name="m3_sys_color_dynamic_dark_primary_container">@android:color/background_device_default_dark</color>
+-    <color name="m3_sys_color_dynamic_dark_secondary">@android:color/background_holo_dark</color>
+-    <color name="m3_sys_color_dynamic_dark_secondary_container">@android:color/background_floating_material_dark</color>
+-    <color name="m3_sys_color_dynamic_dark_surface">@android:color/bright_foreground_disabled_holo_dark</color>
+-    <color name="m3_sys_color_dynamic_dark_surface_bright">@android:color/bright_foreground_light_disabled</color>
+-    <color name="m3_sys_color_dynamic_dark_surface_container">@android:color/bright_foreground_inverse_holo_dark</color>
+-    <color name="m3_sys_color_dynamic_dark_surface_container_high">@android:color/bright_foreground_inverse_holo_light</color>
+-    <color name="m3_sys_color_dynamic_dark_surface_container_highest">@android:color/bright_foreground_light</color>
+-    <color name="m3_sys_color_dynamic_dark_surface_container_low">@android:color/bright_foreground_holo_dark</color>
+-    <color name="m3_sys_color_dynamic_dark_surface_container_lowest">@android:color/bright_foreground_holo_light</color>
+-    <color name="m3_sys_color_dynamic_dark_surface_dim">@android:color/bright_foreground_light_inverse</color>
+-    <color name="m3_sys_color_dynamic_dark_surface_variant">@android:color/btn_colored_background_material</color>
+-    <color name="m3_sys_color_dynamic_dark_tertiary">@android:color/background_material_light</color>
+-    <color name="m3_sys_color_dynamic_dark_tertiary_container">@android:color/background_leanback_dark</color>
+-    <color name="m3_sys_color_dynamic_light_background">@android:color/Teal_800</color>
+-    <color name="m3_sys_color_dynamic_light_inverse_on_surface">@android:color/bright_foreground_disabled_holo_light</color>
+-    <color name="m3_sys_color_dynamic_light_inverse_primary">@android:color/background_floating_device_default_dark</color>
+-    <color name="m3_sys_color_dynamic_light_inverse_surface">@android:color/bright_foreground_disabled_holo_dark</color>
+-    <color name="m3_sys_color_dynamic_light_on_background">@android:color/accent_device_default</color>
+-    <color name="m3_sys_color_dynamic_light_on_primary">@android:color/Indigo_700</color>
+-    <color name="m3_sys_color_dynamic_light_on_primary_container">@android:color/Blue_800</color>
+-    <color name="m3_sys_color_dynamic_light_on_secondary">@android:color/Purple_700</color>
+-    <color name="m3_sys_color_dynamic_light_on_secondary_container">@android:color/Pink_700</color>
+-    <color name="m3_sys_color_dynamic_light_on_surface">@android:color/accent_device_default_700</color>
+-    <color name="m3_sys_color_dynamic_light_on_surface_variant">@android:color/accent_secondary_device_default</color>
+-    <color name="m3_sys_color_dynamic_light_on_tertiary">@android:color/Teal_700</color>
+-    <color name="m3_sys_color_dynamic_light_on_tertiary_container">@android:color/Red_700</color>
+-    <color name="m3_sys_color_dynamic_light_outline">@android:color/accent_secondary_variant_dark_device_default</color>
+-    <color name="m3_sys_color_dynamic_light_outline_variant">@android:color/car_blue_600</color>
+-    <color name="m3_sys_color_dynamic_light_primary">@android:color/GM2_grey_800</color>
+-    <color name="m3_sys_color_dynamic_light_primary_container">@android:color/Blue_700</color>
+-    <color name="m3_sys_color_dynamic_light_secondary">@android:color/Pink_800</color>
+-    <color name="m3_sys_color_dynamic_light_secondary_container">@android:color/Indigo_800</color>
+-    <color name="m3_sys_color_dynamic_light_surface">@android:color/accent_device_default_50</color>
+-    <color name="m3_sys_color_dynamic_light_surface_bright">@android:color/accent_primary_device_default</color>
+-    <color name="m3_sys_color_dynamic_light_surface_container">@android:color/accent_device_default_light</color>
+-    <color name="m3_sys_color_dynamic_light_surface_container_high">@android:color/accent_material_dark</color>
+-    <color name="m3_sys_color_dynamic_light_surface_container_highest">@android:color/accent_material_light</color>
+-    <color name="m3_sys_color_dynamic_light_surface_container_low">@android:color/accent_device_default_dark</color>
+-    <color name="m3_sys_color_dynamic_light_surface_container_lowest">@android:color/accent_device_default_dark_60_percent_opacity</color>
+-    <color name="m3_sys_color_dynamic_light_surface_dim">@android:color/accent_primary_variant_dark_device_default</color>
+-    <color name="m3_sys_color_dynamic_light_surface_variant">@android:color/accent_primary_variant_light_device_default</color>
+-    <color name="m3_sys_color_dynamic_light_tertiary">@android:color/Red_800</color>
+-    <color name="m3_sys_color_dynamic_light_tertiary_container">@android:color/Purple_800</color>
+-    <color name="m3_sys_color_dynamic_on_primary_fixed">@android:color/car_action1</color>
+-    <color name="m3_sys_color_dynamic_on_primary_fixed_variant">@android:color/car_action1_dark</color>
+-    <color name="m3_sys_color_dynamic_on_secondary_fixed">@android:color/car_blue_100</color>
+-    <color name="m3_sys_color_dynamic_on_secondary_fixed_variant">@android:color/car_blue_200</color>
+-    <color name="m3_sys_color_dynamic_on_tertiary_fixed">@android:color/car_blue_50</color>
+-    <color name="m3_sys_color_dynamic_on_tertiary_fixed_variant">@android:color/car_blue_500</color>
+-    <color name="m3_sys_color_dynamic_primary_fixed">@android:color/car_accent_dark</color>
+-    <color name="m3_sys_color_dynamic_primary_fixed_dim">@android:color/car_accent_light</color>
+-    <color name="m3_sys_color_dynamic_secondary_fixed">@android:color/car_action1_light</color>
+-    <color name="m3_sys_color_dynamic_secondary_fixed_dim">@android:color/car_background</color>
+-    <color name="m3_sys_color_dynamic_tertiary_fixed">@android:color/car_blue_300</color>
+-    <color name="m3_sys_color_dynamic_tertiary_fixed_dim">@android:color/car_blue_400</color>
++    <color name="m3_sys_color_dynamic_dark_background">@*android:color/bright_foreground_dark_disabled</color>
++    <color name="m3_sys_color_dynamic_dark_inverse_on_surface">@*android:color/accent_device_default_700</color>
++    <color name="m3_sys_color_dynamic_dark_inverse_primary">@*android:color/GM2_grey_800</color>
++    <color name="m3_sys_color_dynamic_dark_inverse_surface">@*android:color/accent_device_default_50</color>
++    <color name="m3_sys_color_dynamic_dark_on_background">@*android:color/bright_foreground_dark_inverse</color>
++    <color name="m3_sys_color_dynamic_dark_on_primary">@*android:color/background_floating_device_default_light</color>
++    <color name="m3_sys_color_dynamic_dark_on_primary_container">@*android:color/background_device_default_light</color>
++    <color name="m3_sys_color_dynamic_dark_on_secondary">@*android:color/background_holo_light</color>
++    <color name="m3_sys_color_dynamic_dark_on_secondary_container">@*android:color/background_floating_material_light</color>
++    <color name="m3_sys_color_dynamic_dark_on_surface">@*android:color/bright_foreground_disabled_holo_light</color>
++    <color name="m3_sys_color_dynamic_dark_on_surface_variant">@*android:color/btn_colored_borderless_text_material</color>
++    <color name="m3_sys_color_dynamic_dark_on_tertiary">@*android:color/bright_foreground_dark</color>
++    <color name="m3_sys_color_dynamic_dark_on_tertiary_container">@*android:color/background_material_dark</color>
++    <color name="m3_sys_color_dynamic_dark_outline">@*android:color/btn_colored_text_material</color>
++    <color name="m3_sys_color_dynamic_dark_outline_variant">@*android:color/car_blue_700</color>
++    <color name="m3_sys_color_dynamic_dark_primary">@*android:color/background_floating_device_default_dark</color>
++    <color name="m3_sys_color_dynamic_dark_primary_container">@*android:color/background_device_default_dark</color>
++    <color name="m3_sys_color_dynamic_dark_secondary">@*android:color/background_holo_dark</color>
++    <color name="m3_sys_color_dynamic_dark_secondary_container">@*android:color/background_floating_material_dark</color>
++    <color name="m3_sys_color_dynamic_dark_surface">@*android:color/bright_foreground_disabled_holo_dark</color>
++    <color name="m3_sys_color_dynamic_dark_surface_bright">@*android:color/bright_foreground_light_disabled</color>
++    <color name="m3_sys_color_dynamic_dark_surface_container">@*android:color/bright_foreground_inverse_holo_dark</color>
++    <color name="m3_sys_color_dynamic_dark_surface_container_high">@*android:color/bright_foreground_inverse_holo_light</color>
++    <color name="m3_sys_color_dynamic_dark_surface_container_highest">@*android:color/bright_foreground_light</color>
++    <color name="m3_sys_color_dynamic_dark_surface_container_low">@*android:color/bright_foreground_holo_dark</color>
++    <color name="m3_sys_color_dynamic_dark_surface_container_lowest">@*android:color/bright_foreground_holo_light</color>
++    <color name="m3_sys_color_dynamic_dark_surface_dim">@*android:color/bright_foreground_light_inverse</color>
++    <color name="m3_sys_color_dynamic_dark_surface_variant">@*android:color/btn_colored_background_material</color>
++    <color name="m3_sys_color_dynamic_dark_tertiary">@*android:color/background_material_light</color>
++    <color name="m3_sys_color_dynamic_dark_tertiary_container">@*android:color/background_leanback_dark</color>
++    <color name="m3_sys_color_dynamic_light_background">@*android:color/Teal_800</color>
++    <color name="m3_sys_color_dynamic_light_inverse_on_surface">@*android:color/bright_foreground_disabled_holo_light</color>
++    <color name="m3_sys_color_dynamic_light_inverse_primary">@*android:color/background_floating_device_default_dark</color>
++    <color name="m3_sys_color_dynamic_light_inverse_surface">@*android:color/bright_foreground_disabled_holo_dark</color>
++    <color name="m3_sys_color_dynamic_light_on_background">@*android:color/accent_device_default</color>
++    <color name="m3_sys_color_dynamic_light_on_primary">@*android:color/Indigo_700</color>
++    <color name="m3_sys_color_dynamic_light_on_primary_container">@*android:color/Blue_800</color>
++    <color name="m3_sys_color_dynamic_light_on_secondary">@*android:color/Purple_700</color>
++    <color name="m3_sys_color_dynamic_light_on_secondary_container">@*android:color/Pink_700</color>
++    <color name="m3_sys_color_dynamic_light_on_surface">@*android:color/accent_device_default_700</color>
++    <color name="m3_sys_color_dynamic_light_on_surface_variant">@*android:color/accent_secondary_device_default</color>
++    <color name="m3_sys_color_dynamic_light_on_tertiary">@*android:color/Teal_700</color>
++    <color name="m3_sys_color_dynamic_light_on_tertiary_container">@*android:color/Red_700</color>
++    <color name="m3_sys_color_dynamic_light_outline">@*android:color/accent_secondary_variant_dark_device_default</color>
++    <color name="m3_sys_color_dynamic_light_outline_variant">@*android:color/car_blue_600</color>
++    <color name="m3_sys_color_dynamic_light_primary">@*android:color/GM2_grey_800</color>
++    <color name="m3_sys_color_dynamic_light_primary_container">@*android:color/Blue_700</color>
++    <color name="m3_sys_color_dynamic_light_secondary">@*android:color/Pink_800</color>
++    <color name="m3_sys_color_dynamic_light_secondary_container">@*android:color/Indigo_800</color>
++    <color name="m3_sys_color_dynamic_light_surface">@*android:color/accent_device_default_50</color>
++    <color name="m3_sys_color_dynamic_light_surface_bright">@*android:color/accent_primary_device_default</color>
++    <color name="m3_sys_color_dynamic_light_surface_container">@*android:color/accent_device_default_light</color>
++    <color name="m3_sys_color_dynamic_light_surface_container_high">@*android:color/accent_material_dark</color>
++    <color name="m3_sys_color_dynamic_light_surface_container_highest">@*android:color/accent_material_light</color>
++    <color name="m3_sys_color_dynamic_light_surface_container_low">@*android:color/accent_device_default_dark</color>
++    <color name="m3_sys_color_dynamic_light_surface_container_lowest">@*android:color/accent_device_default_dark_60_percent_opacity</color>
++    <color name="m3_sys_color_dynamic_light_surface_dim">@*android:color/accent_primary_variant_dark_device_default</color>
++    <color name="m3_sys_color_dynamic_light_surface_variant">@*android:color/accent_primary_variant_light_device_default</color>
++    <color name="m3_sys_color_dynamic_light_tertiary">@*android:color/Red_800</color>
++    <color name="m3_sys_color_dynamic_light_tertiary_container">@*android:color/Purple_800</color>
++    <color name="m3_sys_color_dynamic_on_primary_fixed">@*android:color/car_action1</color>
++    <color name="m3_sys_color_dynamic_on_primary_fixed_variant">@*android:color/car_action1_dark</color>
++    <color name="m3_sys_color_dynamic_on_secondary_fixed">@*android:color/car_blue_100</color>
++    <color name="m3_sys_color_dynamic_on_secondary_fixed_variant">@*android:color/car_blue_200</color>
++    <color name="m3_sys_color_dynamic_on_tertiary_fixed">@*android:color/car_blue_50</color>
++    <color name="m3_sys_color_dynamic_on_tertiary_fixed_variant">@*android:color/car_blue_500</color>
++    <color name="m3_sys_color_dynamic_primary_fixed">@*android:color/car_accent_dark</color>
++    <color name="m3_sys_color_dynamic_primary_fixed_dim">@*android:color/car_accent_light</color>
++    <color name="m3_sys_color_dynamic_secondary_fixed">@*android:color/car_action1_light</color>
++    <color name="m3_sys_color_dynamic_secondary_fixed_dim">@*android:color/car_background</color>
++    <color name="m3_sys_color_dynamic_tertiary_fixed">@*android:color/car_blue_300</color>
++    <color name="m3_sys_color_dynamic_tertiary_fixed_dim">@*android:color/car_blue_400</color>
+     <color name="material_dynamic_color_dark_error">@color/m3_sys_color_dynamic_dark_error</color>
+     <color name="material_dynamic_color_dark_error_container">@color/m3_sys_color_dynamic_dark_error_container</color>
+     <color name="material_dynamic_color_dark_on_error">@color/m3_sys_color_dynamic_dark_on_error</color>
+@@ -80,12 +80,12 @@
+     <color name="material_dynamic_color_light_error_container">@color/m3_sys_color_dynamic_light_error_container</color>
+     <color name="material_dynamic_color_light_on_error">@color/m3_sys_color_dynamic_light_on_error</color>
+     <color name="material_dynamic_color_light_on_error_container">@color/m3_sys_color_dynamic_light_on_error_container</color>
+-    <color name="m3_sys_color_dynamic_dark_error">@android:color/btn_default_material_dark</color>
+-    <color name="m3_sys_color_dynamic_dark_error_container">@android:color/btn_leanback_color</color>
+-    <color name="m3_sys_color_dynamic_dark_on_error">@android:color/btn_default_material_light</color>
+-    <color name="m3_sys_color_dynamic_dark_on_error_container">@android:color/btn_leanback_focused</color>
+-    <color name="m3_sys_color_dynamic_light_error">@android:color/accent_secondary_variant_light_device_default</color>
+-    <color name="m3_sys_color_dynamic_light_error_container">@android:color/accent_tertiary_variant_dark_device_default</color>
+-    <color name="m3_sys_color_dynamic_light_on_error">@android:color/accent_tertiary_device_default</color>
+-    <color name="m3_sys_color_dynamic_light_on_error_container">@android:color/accent_tertiary_variant_light_device_default</color>
++    <color name="m3_sys_color_dynamic_dark_error">@*android:color/btn_default_material_dark</color>
++    <color name="m3_sys_color_dynamic_dark_error_container">@*android:color/btn_leanback_color</color>
++    <color name="m3_sys_color_dynamic_dark_on_error">@*android:color/btn_default_material_light</color>
++    <color name="m3_sys_color_dynamic_dark_on_error_container">@*android:color/btn_leanback_focused</color>
++    <color name="m3_sys_color_dynamic_light_error">@*android:color/accent_secondary_variant_light_device_default</color>
++    <color name="m3_sys_color_dynamic_light_error_container">@*android:color/accent_tertiary_variant_dark_device_default</color>
++    <color name="m3_sys_color_dynamic_light_on_error">@*android:color/accent_tertiary_device_default</color>
++    <color name="m3_sys_color_dynamic_light_on_error_container">@*android:color/accent_tertiary_variant_light_device_default</color>
+ </resources>
+-- 
+2.47.0.windows.1
+

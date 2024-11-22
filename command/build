@@ -1,6 +1,6 @@
 #!/bin/sh
 
 rm -rf base/dist
-(cd base && apktool b .)
+(cd base && apktool b . --use-aapt2)
 zipalign -p 4 base/dist/base.apk base/dist/base-aligned.apk
 apksigner sign --ks-key-alias $1 --ks $2 base/dist/base-aligned.apk
