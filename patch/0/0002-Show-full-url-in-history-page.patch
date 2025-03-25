@@ -21,10 +21,10 @@ index 4d45108..dcca34e 100644
          </LinearLayout>
          <TextView android:theme="@style/AppTheme" android:textAppearance="?android:textAppearanceSmall" android:textSize="@dimen/history_url_text_size" android:textColor="@color/history_list_subtext_color" android:id="@id/history_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_marginEnd="@dimen/history_item_time_margin_right" />
      </LinearLayout>
-diff --git a/base/smali_classes4/com/sec/android/app/sbrowser/sites/history/view/HistoryAdapter.smali b/base/smali_classes4/com/sec/android/app/sbrowser/sites/history/view/HistoryAdapter.smali
+diff --git a/base/smali_classes5/com/sec/android/app/sbrowser/sites/history/view/HistoryAdapter.smali b/base/smali_classes5/com/sec/android/app/sbrowser/sites/history/view/HistoryAdapter.smali
 index d26f6ac..559c871 100644
---- a/base/smali_classes4/com/sec/android/app/sbrowser/sites/history/view/HistoryAdapter.smali
-+++ b/base/smali_classes4/com/sec/android/app/sbrowser/sites/history/view/HistoryAdapter.smali
+--- a/base/smali_classes5/com/sec/android/app/sbrowser/sites/history/view/HistoryAdapter.smali
++++ b/base/smali_classes5/com/sec/android/app/sbrowser/sites/history/view/HistoryAdapter.smali
 @@ -270,7 +270,7 @@
  
      invoke-direct {v0, v15}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
