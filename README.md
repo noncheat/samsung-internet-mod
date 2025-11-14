@@ -38,6 +38,14 @@ Website can not detect and will service good content (Example Facebook comment).
     ```
 - patched apk in ./base/dist/base-aligned.apk
 
+## Problems
+
+### error: No resource identifier found for attribute
+
+```
+apktool empty-framework-dir
+```
+
 ## ARM IDA
 
 ADRL = ADRP ADD
