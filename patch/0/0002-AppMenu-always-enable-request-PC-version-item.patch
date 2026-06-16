@@ -7,18 +7,18 @@ Subject: [PATCH] AppMenu always enable request PC version item
  .../com/sec/android/app/sbrowser/main_view/menu/AppMenu.smali   | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/base/smali_classes4/com/sec/android/app/sbrowser/main_view/menu/AppMenu.smali b/base/smali_classes4/com/sec/android/app/sbrowser/main_view/menu/AppMenu.smali
+diff --git a/base/smali_classes2/com/sec/android/app/sbrowser/main_view/menu/AppMenu.smali b/base/smali_classes2/com/sec/android/app/sbrowser/main_view/menu/AppMenu.smali
 index cf14aa8..6eaaff2 100644
---- a/base/smali_classes4/com/sec/android/app/sbrowser/main_view/menu/AppMenu.smali
-+++ b/base/smali_classes4/com/sec/android/app/sbrowser/main_view/menu/AppMenu.smali
-@@ -500,7 +500,7 @@
+--- a/base/smali_classes2/com/sec/android/app/sbrowser/main_view/menu/AppMenu.smali
++++ b/base/smali_classes2/com/sec/android/app/sbrowser/main_view/menu/AppMenu.smali
+@@ -455,7 +455,7 @@
      goto :goto_1
  
      :cond_1
--    const/4 p1, 0x0
-+    const/4 p1, 0x1
+-    const/4 p0, 0x0
++    const/4 p0, 0x1
  
-     invoke-static {p2, p1}, Lcom/sec/android/app/sbrowser/common/utils/ViewUtil;->setMenuItemEnabled(Landroid/view/MenuItem;Z)V
+     invoke-static {p2, p0}, Lcom/sec/android/app/sbrowser/common/utils/ViewUtil;->setMenuItemEnabled(Landroid/view/MenuItem;Z)V
  
 -- 
 2.42.0.windows.2
